@@ -1,0 +1,26 @@
+html{
+    font-family: "Raleway", sans-serif;
+}
+
+.conteneur_general{
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+nav ul{
+    list-style-type: none;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 -10px;
+}
+
+nav li {    
+    margin: 0 20px;
+}
+
+.push-left{
+    margin-right: auto;
+}
