@@ -1,12 +1,11 @@
-html{
-    margin:0;
-}
+
 
 body{
     font-family: "Raleway", sans-serif;
     font-size: 15px;
     margin: 0;
     width: 100%;
+    user-select: none;
 }
 
 .conteneur_general{
@@ -31,7 +30,6 @@ ul{
     margin:0;
 }
 
-
 .inscription{
     font-weight: bold;
     color:  #0065FC;
@@ -42,16 +40,25 @@ ul{
     border-top: solid 2px rgba(100, 60, 0, 0);
 }
 
-
-
-#nav-desktop li{
-    padding: 0px 15px;
-}
-#nav-desktop li:hover{
+.overline:hover{
     border-top: solid 2px #0065FC;
     color: #0065FC;
     cursor: pointer;
 }
+.underline {
+    border-bottom: solid 2px #F2F2F2;
+    padding-bottom: 1em;
+}
+
+.underline:hover {
+    border-bottom: solid 2px #0065FC;
+    color: #0065FC;
+}
+
+#nav-desktop li{
+    padding: 0px 15px;
+}
+
 
 #nav-mobile ul{
     display: flex;
@@ -275,7 +282,7 @@ main {
     margin-bottom: 1em;
     background-color: white;
     overflow: auto;
-    
+    transition: all 0.3s;
 }
 .carte1 > *{
     margin: 0 0 0 0.6em;
@@ -355,6 +362,7 @@ main {
     border-radius: 18px;
     height:27%;
     box-shadow: 5px 5px 10px #c0c0c0;
+    transition: all 0.3s;
 }
 
 .carte2 .container-photo{
@@ -424,6 +432,7 @@ main {
     margin-bottom: 3em;
     background-color: white;
     overflow: auto;
+    transition: all 0.3s;
 }
 
 .carte3 .container-photo{
@@ -495,6 +504,11 @@ footer ul li:hover{
     text-decoration: underline;
 }
 
+.zoom:hover{
+    transform: scale(1.03);
+    transition: all 0.3s;
+}
+
 @media (max-width: 1199px){
     .conteneur_general{
         padding: 0;
@@ -517,10 +531,29 @@ footer ul li:hover{
         margin: 0 ;
         background-color: white;
     }
+
+    .ligne-activités{
+        margin-right: -1em;
+    }
+
+    .colonne-activités{
+        margin-right:1em;
+    }
 }
 
 @media (max-width: 769px){
-    
+    header{
+        margin: 0 1em 0 1em;
+    }
+
+    .outils{
+        margin: 0 1em 0 1em;
+    }
+
+    .section-filtres{
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
     .ligne{
         flex-direction: column;
@@ -533,6 +566,7 @@ footer ul li:hover{
     .ligne-activités{
         flex-direction: column;
         height: fit-content;
+        margin: 0;
     }
 
     .colonne-activités{
@@ -540,7 +574,7 @@ footer ul li:hover{
     }
 
     .section-activités{
-        margin-right: 60px;
+        margin-right: 20px;
         height: fit-content;
     }
 
