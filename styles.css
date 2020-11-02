@@ -1,13 +1,21 @@
+html{
+    margin:0;
+}
+
 body{
     font-family: "Raleway", sans-serif;
     font-size: 15px;
-    margin-top: 0;
+    margin: 0;
+    width: 100%;
 }
 
 .conteneur_general{
     max-width: 1440px;
-    margin-left: 10%;
-    margin-right: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 ul{
@@ -64,11 +72,11 @@ nav li{
 
 .logo-container{
     margin-left: 0;
-margin-right: auto;
-padding: 0;
-height: 80px;
-position: relative;
-top: 25px;
+    margin-right: auto;
+    padding: 0;
+    height: 80px;
+    position: relative;
+    top: 25px;
 }
 
 @media (max-width: 769px){
@@ -110,7 +118,7 @@ transition: 0.3s;
 
 .icon-box:hover{
     cursor: pointer;
-    font-size: 130%;
+    font-size: 120%;
     transition: 0.3s;
 }
 
@@ -154,6 +162,8 @@ transition: 0.3s;
     background: #1473ff radial-gradient(circle, transparent 1%, #3586ff 1%) center/15000%;
     border-color: #1473ff;
     cursor: pointer;
+    text-shadow: 1px 1px 2px #0a3f8d;
+    transition: 0.8s;
   }
 
 .ripple:active {
@@ -183,23 +193,37 @@ transition: 0.3s;
     color: #0065FC;
     border-radius: 50%;
     position: relative;
-    bottom: 2px;
-    right: 3px;
-    
+    right: 2px;
 }
 
 .section-filtres li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border: 2px solid #F2F2F2;
     border-radius: 20px;
     height: 36px;
-    padding-right: 1em;
-    margin: 0.5em 2em 0.5em 0;
+    margin: 0.5em 2em 0.5em 0;  
     font-weight: bold;
+}
+
+.section-filtres li p{
+    margin: 0 1em 0 0.8em;
+    transition: 0.2s;
+}
+
+.section-filtres li p:hover{
+    color:#0065FC;
+    padding-right: 0.2em;
+    padding-left: 0.2em;
+    transition: 0.2s;
+    cursor: pointer;
 }
 
 .info-container{
     display: flex;
     align-items: center;
+    margin-bottom: 1em;
 }
 
 .info-container i {
@@ -222,30 +246,43 @@ transition: 0.3s;
 
 main {
     flex: 2;
-    height: 650px;
-    margin-right: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 3%;
     overflow: hidden;
     background-color: #F2F2F2;
-    padding: 1em 4% 2em 4%;
-    border-radius: 14px;
+    padding: 1em 3% 2em 3%;
+    border-radius: 18px;
 }
 
 .ligne{
     display: flex;
     justify-content: space-between;
+    margin-right: -2em;
 }
 
 .carte1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 30%;
-    height: 250px;
+    margin-right: 2em;
+    height: 200px;
     border: 4px solid white;
-    border-radius: 14px;
+    border-radius: 18px;
     box-shadow: 5px 5px 10px #c0c0c0;
     margin-bottom: 1em;
     background-color: white;
+    overflow: auto;
+    
+}
+.carte1 > *{
+    margin: 0 0 0 0.6em;
 }
 
 .carte1 .container-photo{
+    margin-left: 0;
     border-radius: 14px 14px 0 0;
     height: 55%;
     overflow: hidden;
@@ -290,22 +327,14 @@ main {
     color: #F2F2F2;
 }
 
-body{
-    font-family: "Raleway", sans-serif;
-    font-size: 15px;
-    margin-top: 0;
-}
-
 .coté-droit{
     display: flex;
     flex:1;
     flex-direction: column;
-    
     background-color: #F2F2F2;
-    height: 650px;
     overflow: hidden;
-    padding: 1em 2em 2em 2em;
-    border-radius: 14px;
+    padding: 1em 3% 2em 3%;
+    border-radius: 18px;
 }
 
 .coté-droit > h2 > i {
@@ -320,11 +349,11 @@ body{
 }
 
 .carte2{
+    display: flex;
     background-color: white;
     border: 4px solid white;
-    border-radius: 14px;
-    height:30%;
-    display: flex;
+    border-radius: 18px;
+    height:27%;
     box-shadow: 5px 5px 10px #c0c0c0;
 }
 
@@ -338,10 +367,15 @@ body{
 }
 
 .bloc-texte{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     width: 60%;
+    margin-top: 0.5em;
 }
 
-.push-bottom{
+.bloc-texte >*{
+    margin: 0;
 }
 
 #Hotel_le_soleil_du_matin{
@@ -361,3 +395,161 @@ body{
     background-repeat:no-repeat;
 }
 
+.section-activités{
+    margin: 0 3% 0 3%;
+}
+.ligne-activités{
+    display: flex;
+    height: 500px;
+    justify-content: space-between;
+    margin-right: -3em;
+}
+
+.colonne-activités{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 3em;
+    margin-bottom: -3em;
+}
+
+.carte3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border-radius: 18px;
+    box-shadow: 5px 5px 10px #c0c0c0;
+    margin-bottom: 3em;
+    background-color: white;
+    overflow: auto;
+}
+
+.carte3 .container-photo{
+    margin-left: 0;
+    border-radius: 18px 18px 0 0;
+    height: 100%;
+    overflow: hidden;
+    background-position: center;
+    background-size:cover;
+}
+
+.carte3 h3{
+    margin-left: 0.6em;
+}
+
+.height80{
+    height: 80%;
+}
+
+#Vieux_Port{
+    background-image: url("images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg");
+}
+
+#Fort_de_Pomègues{
+    background-image: url("images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg");
+}
+
+#Îles_du_Frioul{
+    background-image: url("images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg");
+}
+
+#Parc_National_des_Calanques{
+    background-image: url("images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg");
+}
+
+#Notre_Dame_de_la_Garde{
+    background-image: url("images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg");
+}
+
+#Parc_Longchamp{
+    background-image: url("images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg");
+}
+
+footer{
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    padding: 2em 0 1em 2em;
+}
+
+footer div{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li{
+    margin-bottom: 1em;
+}
+
+footer ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media (max-width: 1199px){
+    .conteneur_general{
+        padding: 0;
+    }
+    .section-milieu{
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+
+    .coté-droit{
+        border-radius: 0;
+    }
+
+    .carte2{
+        height: 170px;
+        margin-bottom: 1em;
+    }
+
+    main{
+        margin: 0 ;
+        background-color: white;
+    }
+}
+
+@media (max-width: 769px){
+    
+
+    .ligne{
+        flex-direction: column;
+    }
+    .carte1{
+        width:calc(100% - 40px);
+        height: 250px;
+    }
+
+    .ligne-activités{
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .colonne-activités{
+        margin: 0;
+    }
+
+    .section-activités{
+        margin-right: 60px;
+        height: fit-content;
+    }
+
+    .carte3{
+        height: 250px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+}
