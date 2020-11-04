@@ -1,7 +1,21 @@
 
-
+/* raleway-regular - latin */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/raleway-v18-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('fonts/raleway-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/raleway-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/raleway-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('fonts/raleway-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/raleway-v18-latin-regular.svg#Raleway') format('svg'); /* Legacy iOS */
+  }
+    
 body{
-    font-family: "Raleway", sans-serif;
+    
+    font-family: 'Raleway', sans-serif;
     font-size: 15px;
     margin: 0;
     width: 100%;
@@ -297,27 +311,27 @@ main {
     background-size:cover;
 }
 
-#Auberge_de_la_Canebière{
+#hebergement1{
     background-image: url("images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
 }
 
-#Hotel_du_port{
+#hebergement2{
     background-image: url("images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg");
 }
 
-#Hotel_Les_mouettes{
+#hebergement3{
     background-image: url("images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg");
 }
 
-#Hotel_de_la_mer{
+#hebergement4{
     background-image: url("images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
 }
 
-#Auberge_Le_Panier{
+#hebergement5{
     background-image: url("images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
 }
 
-#Hotel_chez_Amina{
+#hebergement6{
     background-image: url("images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg")
 }
 
@@ -386,19 +400,19 @@ main {
     margin: 0;
 }
 
-#Hotel_le_soleil_du_matin{
+#populaire1{
     background-image: url("images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
     background-repeat:no-repeat;
     
 }
 
-#Au_coeur_de_l_eau_Chambres_d_hôtes{
+#populaire2{
     background-image: url("images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg");
     background-repeat:no-repeat;
     
 }
 
-#Hôtel_Tout_bleu_et_blanc{
+#populaire3{
     background-image: url("images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
     background-repeat:no-repeat;
 }
@@ -452,27 +466,27 @@ main {
     height: 80%;
 }
 
-#Vieux_Port{
+#activite1{
     background-image: url("images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg");
 }
 
-#Fort_de_Pomègues{
+#activite2{
     background-image: url("images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg");
 }
 
-#Îles_du_Frioul{
+#activite3{
     background-image: url("images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg");
 }
 
-#Parc_National_des_Calanques{
+#activite4{
     background-image: url("images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg");
 }
 
-#Notre_Dame_de_la_Garde{
+#activite5{
     background-image: url("images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg");
 }
 
-#Parc_Longchamp{
+#activite6{
     background-image: url("images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg");
 }
 
@@ -507,6 +521,7 @@ footer ul li:hover{
 .zoom:hover{
     transform: scale(1.03);
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 @media (max-width: 1199px){
