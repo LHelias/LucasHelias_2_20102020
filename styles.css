@@ -24,13 +24,14 @@ body{
 
 .conteneur_general{
     max-width: 1440px;
-    padding-left: 10%;
-    padding-right: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
 
+/* propriétés du header*/
 ul{
     list-style-type: none;
 }
@@ -55,24 +56,25 @@ ul{
 }
 
 .overline:hover{
-    border-top: solid 2px #0065FC;
+    border-top: solid 2px #0065FC;  /* Propriété pour mettre en valeur les onglets desktop*/
     color: #0065FC;
     cursor: pointer;
 }
+
+
 .underline {
     border-bottom: solid 2px #F2F2F2;
     padding-bottom: 1em;
 }
 
 .underline:hover {
-    border-bottom: solid 2px #0065FC;
+    border-bottom: solid 2px #0065FC; /* Propriété pour mettre en valeur les onglets mobiles*/
     color: #0065FC;
 }
 
 #nav-desktop li{
-    padding: 0px 15px;
+    padding: 0px 15px; 
 }
-
 
 #nav-mobile ul{
     display: flex;
@@ -86,7 +88,7 @@ ul{
 }
 
 nav li{
-    text-align: center;
+    text-align: center;         /* Centre les éléments de navigation du header*/
     vertical-align: middle;
     line-height: 80px;
 }
@@ -100,26 +102,11 @@ nav li{
     top: 25px;
 }
 
-@media (max-width: 769px){
-    #nav-desktop{
-        display:none;
-    }
-}
-@media (min-width: 769px){
-    #nav-mobile{
-        display:none;
-    }
-}
-
 h2{
     font-size: large;
     font-weight: bold;
 }
-
-.wrap{
-    width: fit-content;
-}
-
+/* propriétés de la section de classe "outils" */
 .search{
     width:100%;
     display: flex;
@@ -177,7 +164,7 @@ transition: 0.3s;
 .ripple {
     background-position: center;
     transition: background 0.8s;
-  }
+}
 
 .ripple:hover {
     background: #1473ff radial-gradient(circle, transparent 1%, #3586ff 1%) center/15000%;
@@ -185,7 +172,7 @@ transition: 0.3s;
     cursor: pointer;
     text-shadow: 1px 1px 2px #0a3f8d;
     transition: 0.8s;
-  }
+}
 
 .ripple:active {
     background-color: #6eb9f7;
@@ -259,6 +246,8 @@ transition: 0.3s;
     margin-right: 1em;
     font-size: small;
 }
+
+/* propriétés de la section milieu" */
 
 .section-milieu{
     display: flex;
@@ -417,6 +406,8 @@ main {
     background-repeat:no-repeat;
 }
 
+/* propriétés de la section activités */
+
 .section-activités{
     margin: 0 3% 0 3%;
 }
@@ -490,12 +481,16 @@ main {
     background-image: url("images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg");
 }
 
+
+/* propriétés du footer */
+
 footer{
     background-color: #F2F2F2;
     display: flex;
     justify-content: space-around;
     text-align: left;
     padding: 2em 0 1em 2em;
+    margin-top: 3em;
 }
 
 footer div{
@@ -526,7 +521,7 @@ footer ul li:hover{
 
 @media (max-width: 1199px){
     .conteneur_general{
-        padding: 0;
+        margin: 0;
     }
     .section-milieu{
         flex-direction: column-reverse;
@@ -556,7 +551,17 @@ footer ul li:hover{
     }
 }
 
+@media (min-width: 769px){
+    #nav-mobile{
+        display:none; /* masque les onglets de navigation mobile sur desktop */
+    }
+}
+
 @media (max-width: 769px){
+    #nav-desktop{
+        display:none; /* masque les ongles de navigation desktop sur mobile*/
+    }
+    
     header{
         margin: 0 1em 0 1em;
     }
